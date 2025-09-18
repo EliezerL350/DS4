@@ -12,19 +12,21 @@ namespace Laboratorio31
 
             Console.Write("Introduce el primer numero: ");
             primerNumero = Convert.ToInt32(Console.ReadLine());
-
             Console.Write("Introduce el segundo numero: ");
             segundoNumero = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Resultado {0}", calculosMatematicos.calcular);
+            int calcular = calculosMatematicos.calcular(primerNumero, segundoNumero);
+            Console.WriteLine("Resultado {0}", calcular);
         }
     }
     public class CalculosMatematicos
     {
-        int primerNumero, segundoNumero, calcular;
-
         //Metodo de calculo
-        calcular = (primerNumero + segundoNumero) * (primerNumero - segundoNumero);
+        public int calcular (int primerNumero, int segundoNumero)
+        {
+            int calcular = (primerNumero + segundoNumero) * (primerNumero - segundoNumero);
+            return calcular;
+        }    
     }
 
 }
