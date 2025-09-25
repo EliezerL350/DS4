@@ -16,15 +16,18 @@ namespace Laboratorio31
             Console.Write("Introduce el segundo numero: ");
             segundoNumero = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Resultado {0}", calculosMatematicos.calcular);
+            int calcularOperacion = calculosMatematicos.calcularOperacion(primerNumero, segundoNumero);
+            Console.WriteLine("Resultado {0}", calcularOperacion);
         }
     }
     public class CalculosMatematicos
     {
-        int primerNumero, segundoNumero, calcular;
-
-        //Metodo de calculo
-        calcular = (primerNumero + segundoNumero) * (primerNumero - segundoNumero);
+        //Metodo de calculo para la operacion
+        public int calcularOperacion (int primerNumero, int segundoNumero)
+        {
+            int resultado = (primerNumero + segundoNumero) * (primerNumero - segundoNumero);
+            return resultado;
+        }
     }
 
 }
