@@ -1,6 +1,6 @@
 ﻿namespace Laboratorio141
 {
-    partial class Form1
+    partial class frmProductos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -39,10 +39,11 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.tstId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tsbEliminar = new System.Windows.Forms.Button();
+            this.tsbGuardar = new System.Windows.Forms.Button();
+            this.tsbBuscar = new System.Windows.Forms.Button();
+            this.tsbNuevo = new System.Windows.Forms.Button();
+            this.tsbCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -142,54 +143,63 @@
             this.tstId.Size = new System.Drawing.Size(198, 20);
             this.tstId.TabIndex = 10;
             // 
-            // button1
+            // tsbEliminar
             // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tsbEliminar.Image = global::Laboratorio141.Properties.Resources.eliminar;
+            this.tsbEliminar.Location = new System.Drawing.Point(201, 12);
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(41, 37);
+            this.tsbEliminar.TabIndex = 15;
+            this.tsbEliminar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // tsbGuardar
             // 
-            this.button2.Location = new System.Drawing.Point(8, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tsbGuardar.Image = global::Laboratorio141.Properties.Resources.guardar;
+            this.tsbGuardar.Location = new System.Drawing.Point(104, 12);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(44, 36);
+            this.tsbGuardar.TabIndex = 14;
+            this.tsbGuardar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // tsbBuscar
             // 
-            this.button3.Location = new System.Drawing.Point(16, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.tsbBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tsbBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.tsbBuscar.Image = global::Laboratorio141.Properties.Resources.buscar;
+            this.tsbBuscar.Location = new System.Drawing.Point(569, 14);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(40, 34);
+            this.tsbBuscar.TabIndex = 12;
+            this.tsbBuscar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // tsbNuevo
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Image = global::Laboratorio141.Properties.Resources.buscar;
-            this.button4.Location = new System.Drawing.Point(580, 21);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(66, 56);
-            this.button4.TabIndex = 14;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.tsbNuevo.Image = global::Laboratorio141.Properties.Resources.nuevo;
+            this.tsbNuevo.Location = new System.Drawing.Point(58, 12);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(40, 39);
+            this.tsbNuevo.TabIndex = 11;
+            this.tsbNuevo.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Image = global::Laboratorio141.Properties.Resources.cancelar;
+            this.tsbCancelar.Location = new System.Drawing.Point(154, 10);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(41, 41);
+            this.tsbCancelar.TabIndex = 16;
+            this.tsbCancelar.UseVisualStyleBackColor = true;
+            // 
+            // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tsbCancelar);
+            this.Controls.Add(this.tsbEliminar);
+            this.Controls.Add(this.tsbGuardar);
+            this.Controls.Add(this.tsbBuscar);
+            this.Controls.Add(this.tsbNuevo);
             this.Controls.Add(this.tstId);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtNombre);
@@ -201,8 +211,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Name = "frmProductos";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,10 +233,11 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox tstId;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button tsbNuevo;
+        private System.Windows.Forms.Button tsbBuscar;
+        private System.Windows.Forms.Button tsbGuardar;
+        private System.Windows.Forms.Button tsbEliminar;
+        private System.Windows.Forms.Button tsbCancelar;
     }
 }
 
