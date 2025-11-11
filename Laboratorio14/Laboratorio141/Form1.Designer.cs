@@ -142,6 +142,7 @@
             this.tstId.Name = "tstId";
             this.tstId.Size = new System.Drawing.Size(198, 20);
             this.tstId.TabIndex = 10;
+            this.tstId.TextChanged += new System.EventHandler(this.tstId_TextChanged);
             // 
             // tsbEliminar
             // 

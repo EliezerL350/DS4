@@ -249,5 +249,10 @@ namespace Laboratorio141
         {
 
         }
+
+        private void tstId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
